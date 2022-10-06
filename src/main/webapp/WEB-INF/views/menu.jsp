@@ -4,9 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>메뉴</title>
 </head>
-<body>
-
+<body>	
+	<h3>OOO님 안녕하세요.</h3>
+	<ul>
+		<li><a href="/boardList.do">게시판</a></li>
+		<li><a href="/modifyPage.do">패스워드변경</a></li>
+		<li><a href="#">로그아웃</a></li>
+	</ul>
 </body>
 </html>

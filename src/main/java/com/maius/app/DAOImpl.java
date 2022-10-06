@@ -13,7 +13,7 @@ public class DAOImpl implements DAO {
     @Inject
     private SqlSession sqlSession;
 	@Override
-	public HashMap<String, Object> selectMovie() throws Exception {
+	public HashMap<String, Object> selectTest() throws Exception {
 		// TODO Auto-generated method stub
 		return sqlSession.selectOne("test.TESTSQL");
 	}

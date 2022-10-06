@@ -29,9 +29,9 @@ public class HomeController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@Inject
-    private DAO dao;
+    private HomeService service;
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/hometest", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) throws Exception  {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
@@ -42,11 +42,35 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		Map<String,Object> result =dao.selectMovie();
+		Map<String,Object> result =service.selectTest();
 		
 		model.addAttribute("result", result );
 		
 		return "home";
+	}
+	@RequestMapping(value = "/loginPage.do", method = RequestMethod.GET)
+	public String loginPage(Locale locale, Model model) throws Exception  {
+		return "login";
+	}
+	@RequestMapping(value = "/menu.do", method = RequestMethod.GET)
+	public String menu(Locale locale, Model model) throws Exception  {
+		return "menu";
+	}
+	@RequestMapping(value = "/joinPage.do", method = RequestMethod.GET)
+	public String joinPage(Locale locale, Model model) throws Exception  {
+		return "join";
+	}
+	@RequestMapping(value = "/modifyPage.do", method = RequestMethod.GET)
+	public String modifyPage(Locale locale, Model model) throws Exception  {
+		return "modify";
+	}
+	@RequestMapping(value = "/boardList.do", method = RequestMethod.GET)
+	public String boardList(Locale locale, Model model) throws Exception  {
+		return "boardList";
+	}
+	@RequestMapping(value = "/boardDetail.do", method = RequestMethod.GET)
+	public String boardDetail(Locale locale, Model model) throws Exception  {
+		return "boardDetail";
 	}
 	
 	
